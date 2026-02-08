@@ -49,3 +49,19 @@ That repository strongly motivated me to build:
 ├── script.js       # Logic (search, filter, render)
 ├── APIs.js         # API data (contributors edit ONLY this file)
 └── README.md
+```
+
+## Contributing Guidelines
+Contributions are welcome! 🎉
+If you want to add a new API, please follow the rules below.
+✅ API Rules
+Only add APIs that are:
+✔ Free or Freemium (must have a usable free tier)
+✔ Publicly accessible
+✔ From trusted and legitimate sources
+❌ No suspicious, unsafe, or illegal APIs
+❌ No paid-only or private APIs
+🪜 Steps to Contribute
+Fork this repository
+Clone your fork
+Copy code
