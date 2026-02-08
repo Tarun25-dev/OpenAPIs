@@ -71,7 +71,7 @@ Only add APIs that are:
 
 ❌ No paid-only or private APIs
 
-|| Steps to Contribute
+#### Steps to Contribute
 
 >> Fork this repository
 
