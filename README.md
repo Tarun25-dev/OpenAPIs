@@ -37,7 +37,7 @@ That repository strongly motivated me to build:
 
 - **HTML5**
 - **Tailwind CSS**
-- **Vanilla JavaScript**
+- **JavaScript**
 - **GitHub Pages** (Hosting)
 
 ---
