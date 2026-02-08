@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Open APIs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+    </style>
+</head>
+<body class="min-h-screen text-white p-4 sm:p-8">
+    <!-- Hero -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">🔌 Open APIs</h1>
+        <p class="text-xl text-gray-300 mb-8 max-w-md mx-auto">20+ free public APIs. Search, filter, copy docs instantly.</p>
+        
+        <!-- Search -->
+        <div class="max-w-md mx-auto mb-8">
+            <input type="text" id="search" placeholder="Search APIs (e.g., weather)..." class="w-full p-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        
+        <!-- Filter -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+            <button onclick="filter('all')" class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600">All</button>
+            <button onclick="filter('AI')" class="px-4 py-2 bg-purple-500 rounded-lg hover:bg-purple-600">🤖 AI</button>
+            <button onclick="filter('Weather')" class="px-4 py-2 bg-sky-500 rounded-lg hover:bg-sky-600">🌤️ Weather</button>
+            <button onclick="filter('Finance')" class="px-4 py-2 bg-green-500 rounded-lg hover:bg-green-600">💰 Finance</button>
+            <button onclick="filter('Other')" class="px-4 py-2 bg-gray-500 rounded-lg hover:bg-gray-600">📦 Other</button>
+        </div>
+    </div>
+    
+    <!-- APIs Grid -->
+    <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"></div>
+</body>
+<script src="apis.js"></script>
+<script src="script.js"></script>
+</html>

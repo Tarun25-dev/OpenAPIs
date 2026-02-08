@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="search" id="search" placeholder="search...">
+    <br><br>
+    <button onclick="setCategory('all')">ALL</button>
+    <button onclick="setCategory('ai')">AI</button>
+    <button onclick="setCategory('Weather')">Weather</button>
+    <ul id="list"></ul>
+</body>
+<script>
+    const apis = [
+        {name:"OpenAi",domain:"ai"},
+        {name:"HuggingFace",domain:"ai"},
+        {name:"OpenWeather",domain:"Weather"},
+        {name:"Open-Metro",domain:"Weather"}
+    ];
+
+    let currentCategory = "all";
+    function setCategory(category){
+        currentCategory = category;
+        applyFilters();
+    }
+
+    document.getElementById("search").addEventListener("input",applyFilters);
+
+    function applyFilters(){
+        const searchtext = document.getElementById("search").value.toLowerCase();
+        let result = apis
+
+        if (currentCategory !== "all"){
+            result = result.filter(api => api.domain === currentCategory);
+        }
+        if (searchtext != ""){
+            result = result.filter(api => api.name.toLocaleLowerCase().includes(searchtext));
+        }
+        render(result);
+    }
+    function render(data){
+        const list = document.getElementById("list");
+        list.innerHTML="";
+        data.forEach(api => {
+            const li = document.createElement("li")
+            li.textContent = `${api.name} (${api.domain})`;
+            list.appendChild(li)
+        });
+    }
+</script>
+</html>
