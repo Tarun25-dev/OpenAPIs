@@ -52,7 +52,9 @@ That repository strongly motivated me to build:
 ```
 
 ## Contributing Guidelines
-Contributions are welcome! 🎉
+
+# Contributions are welcome! 🎉
+
 If you want to add a new API, please follow the rules below.
 ✅ API Rules
 Only add APIs that are:
