@@ -5,7 +5,7 @@ A simple and beginner-friendly web application that lists **free and publicly av
 The goal of this project is to help developers **quickly discover APIs**, understand whether they are **free, freemium, or paid**, and know if **authentication is required**, all through a clean and simple UI.
 
 🌐 **Live Demo:**  
-👉 (https://tarun25-dev.github.io/OpenAPIs/)
+👉 [https://tarun25-dev.github.io/OpenAPIs/]
 
 ---
 
